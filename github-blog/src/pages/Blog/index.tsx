@@ -1,7 +1,9 @@
+import { Profile } from "./components/Profile"
+
 export const Blog = () => {
     return (
         <div>
-            <p>Blog</p>
+            <Profile />
         </div>
     )
 }
