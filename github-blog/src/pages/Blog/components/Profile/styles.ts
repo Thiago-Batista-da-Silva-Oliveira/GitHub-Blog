@@ -42,6 +42,7 @@ export const ProfileDetails = styled.div `
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: auto;
 
     li{
       display: flex;
