@@ -1,6 +1,8 @@
-
-
 import styled from 'styled-components'
+
+interface ExternalLinkProps {
+  variant?: "iconLeft"
+}
 
 export const ExternalLinkContainer = styled.a `
   border: none;

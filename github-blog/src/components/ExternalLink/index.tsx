@@ -1,18 +1,19 @@
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ComponentProps } from "react";
+import { ComponentProps, ReactNode } from "react";
 import { ExternalLinkContainer } from "./styles"
 
 type ExternalLinkProps = ComponentProps<typeof ExternalLinkContainer> & {
     text: string;
-
+    icon?: ReactNode;
+    variant?: "iconLeft"
 }
 
-export const ExternalLink = ({text, ...rest}: ExternalLinkProps) => {
+export const ExternalLink = ({text, icon, ...rest}: ExternalLinkProps) => {
     return (
         <ExternalLinkContainer {...rest}>
             {text}
-            <FontAwesomeIcon icon={faUpRightFromSquare} />
+           { icon ?? <FontAwesomeIcon icon={faUpRightFromSquare} />}
         </ExternalLinkContainer>
     )
 }
