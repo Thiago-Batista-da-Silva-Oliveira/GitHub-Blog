@@ -12,8 +12,8 @@ type ExternalLinkProps = ComponentProps<typeof ExternalLinkContainer> & {
 export const ExternalLink = ({text, icon, ...rest}: ExternalLinkProps) => {
     return (
         <ExternalLinkContainer {...rest}>
+            { icon ?? <FontAwesomeIcon icon={faUpRightFromSquare} />}
             {text}
-           { icon ?? <FontAwesomeIcon icon={faUpRightFromSquare} />}
         </ExternalLinkContainer>
     )
 }
